@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shortener_app',
+    'shortener.apps.ShortenerConfig',
     'debug_toolbar',
 ]
 
