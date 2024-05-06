@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('hello/', views.say_hello),
+    path('create', views.create, name='create'),
+    path('<str:code>', views.redirect, name='redirect'),
 ]
