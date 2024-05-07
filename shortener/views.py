@@ -8,7 +8,7 @@ from .models import ShortUri
 
 def create(request: HttpRequest):
     if request.method != 'POST':
-        return Http404()
+        raise Http404()
 
     # Get the destination uri
     request_body = json.loads(request.body)
@@ -42,11 +42,11 @@ def create(request: HttpRequest):
 
 def redirect(request: HttpRequest, code):
     if request.method != 'GET':
-        return Http404()
+        raise Http404()
 
     shorturi = ShortUri.objects.filter(code=code).first()
 
     if shorturi is None:
-        return Http404()
+        raise Http404()
 
     return HttpResponseRedirect(shorturi.dest_uri)
