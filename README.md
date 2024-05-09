@@ -17,12 +17,14 @@ SQLite3 can be [substituted](https://docs.djangoproject.com/en/5.0/ref/databases
 
 ## Running the App Locally
 
-1. Clone the repo and navigate to the directory `git clone https://github.com/rendevelop/url-shortener.git && cd $_`
+1. Clone the repo and navigate to the directory `git clone https://github.com/rendevelop/url-shortener.git`
 2. Install [Python3](https://wiki.python.org/moin/BeginnersGuide/Download)
 3. Install [PipEnv](https://pipenv.pypa.io/en/latest/installation.html#installing-pipenv)
 4. Run `pipenv install` to install the Django dependencies
-5. Run the database migrations `python3 manage.py migrate`
-6. Run the server `python3 manage.py runserver`
-7. Navigate to the frontend folder `cd frontend`
-8. Rename the `.env.sample` file to `.env`. This file contains the `PORT` env variable that Node will use to start the frontend client
-9. Run `npm start`
+5. Run `pipenv shell` to activate the virtual environment
+6. Run the database migrations `python3 manage.py migrate`
+7. Run the server `python3 manage.py runserver`
+8. Navigate to the frontend folder `cd frontend`
+9. Rename the `.env.sample` file to `.env`. This file contains the `PORT` env variable that Node will use to start the frontend client
+10. Run `npm install` to install the npm packages locally
+11. Run `npm start` to start the frontend server
