@@ -17,6 +17,8 @@ const ShortenForm = () => {
         const csrfToken = Cookies.get('csrftoken') || '';
 
         if (prevInputUrl === url) {
+            input.setCustomValidity('Please enter a different URL');
+
             return;
         }
 
